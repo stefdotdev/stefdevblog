@@ -1,8 +1,1 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap");
-
-.gridcolsmin {
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(100%/3, max(64px, 100%/5)), 1fr)
-  );
-}
