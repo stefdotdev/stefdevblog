@@ -4,14 +4,39 @@ const allPosts = await Astro.glob("./blog/*.md");
 ---
 
 <BaseLayout pageTitle="Stef.dev | Blog">
-  <h1>Astro</h1>
-  <ul>
-    {
-      allPosts.map((post) => (
-        <li>
-          <a href={post.url}>{post.frontmatter.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <div class="pt-14 lg:px-8">
+    <div class="grid mx-auto max-w-2xl">
+      <div class="text-center">
+        <h1 class="text-4xl tracking-tight text-gray-900 sm:text-5xl">
+          Stef.dev
+        </h1>
+        <p class="mt-6 leading-5 text-sm sm:text-lg leading-8 text-gray-600">
+          Welcome to my Dev Log. I write about Language Learning, Web
+          Development and other interests of mine. Below you can browse some of
+          the subjects I've written on, or see my recent projects here.
+        </p>
+        <div class="mt-10 gap-x-6">
+          <a
+            href="#"
+            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >Get started</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="mx-auto max-w-4xl my-8" />
+
+  <div class="latest-posts mx-auto max-w-2xl">
+    <h2 class="mx-auto font-bold text-2xl">Recent Posts</h2>
+    <ul>
+      {
+        allPosts.map((post) => (
+          <li>
+            <a href={post.url}>{post.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>
