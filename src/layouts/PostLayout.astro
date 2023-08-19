@@ -6,7 +6,27 @@ const { pageTitle, ...post } = Astro.props;
 
 <BaseLayout pageTitle={post.title}>
   <article>
-    <h1>{post.title}</h1>
-    <p><slot /></p>
+    <div class="pt-14 lg:px-8">
+      <div class="mx-auto max-w-2xl">
+        <div class="text-center">
+          <h1
+            class="font-mono text-4xl tracking-tight text-gray-900 sm:text-5xl"
+          >
+            {post.title}
+          </h1>
+          <p class="mt-6 leading-5 text-sm sm:text-lg leading-8 text-gray-600">
+            {post.description}
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr class="mx-auto max-w-4xl my-8" />
+    <div
+      class="mx-auto max-w-2xl px-4 sm:px-0 text-sm sm:text-lg text-gray-600"
+    >
+      <p class="">
+        <slot />
+      </p>
+    </div>
   </article>
 </BaseLayout>

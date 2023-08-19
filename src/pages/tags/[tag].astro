@@ -31,11 +31,10 @@ const { posts } = Astro.props;
       {
         posts.map((post) => (
           <>
-            <a href={post.url} />
             <li class="mb-6">
               <div class="lg:flex lg:items-center lg:justify-between">
                 <div class="min-w-0 flex-1">
-                  <a href={post.url}>
+                  <a href={`/blog/${post.slug}`}>
                     <h2 class="font-mono text-2xl font-bold leading-7 text-gray-700 sm:truncate sm:text-3xl sm:tracking-tight">
                       {post.data.title}
                     </h2>
