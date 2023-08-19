@@ -1,23 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap");
 
-// Explicit colors for tag pills background color so as
-// it is dynamically inserted and Tailwind will purge it.
-.bgblue {
-  background-color: #eff6ff;
-}
-.bgred {
-  background-color: #fef2f2;
-}
-.bgpurple {
-  background-color: #faf5ff;
-}
-.bgorange {
-  background-color: #fff7ed;
-}
-.bggreen {
-  background-color: #f0fdf4;
+/* Explicitly declared colors to be dynamically inserted, so Tailwind doesn't get rid of them */
+.customSlate {
+  background-color: #f8fafc;
 }
 
-.bgslate {
-  background-color: #f8fafc;
+.customBlue {
+  background-color: #eff6ff;
+}
+
+.customPurple {
+  background-color: #faf5ff;
+}
+
+.customRed {
+  background-color: #fef2f2;
+}
+
+.customOrange {
+  background-color: #fff7ed;
+}
+
+.customGreen {
+  background-color: #f0fdf4;
 }
