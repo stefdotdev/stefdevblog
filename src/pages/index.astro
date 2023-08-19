@@ -9,7 +9,7 @@ const allPosts = await Astro.glob("./blog/*.md");
     <HeroComponent />
     <hr class="mx-auto max-w-4xl my-8" />
     <div class="latest-posts mx-auto max-w-2xl">
-      <h2 class="mx-auto font-bold text-2xl">Recent Posts</h2>
+      <h2 class="mx-auto text-2xl italic">Recent Posts</h2>
       <ul class="grid mt-4">
         {
           allPosts.map((post) => (
@@ -19,7 +19,7 @@ const allPosts = await Astro.glob("./blog/*.md");
                 <div class="lg:flex lg:items-center lg:justify-between">
                   <div class="min-w-0 flex-1">
                     <a href={post.url}>
-                      <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+                      <h2 class="font-mono text-2xl font-bold leading-7 text-gray-700 sm:truncate sm:text-3xl sm:tracking-tight">
                         {post.frontmatter.title}
                       </h2>
                     </a>
@@ -42,7 +42,7 @@ const allPosts = await Astro.glob("./blog/*.md");
                     </div>
                   </div>
                 </div>
-                <p>{post.frontmatter.description}</p>
+                <p class="text-gray-600 pt-4">{post.frontmatter.description}</p>
               </li>
             </>
           ))
