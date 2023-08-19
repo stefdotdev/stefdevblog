@@ -7,7 +7,7 @@ author: "Astro Learner"
 image:
   url: "https://docs.astro.build/assets/full-logo-light.png"
   alt: "The full Astro logo."
-tags: ["Astro", "Code", "learning in public"]
+tags: ["Astro", "Dev", "Learning In Public"]
 ---
 
 # My First Blog Post
