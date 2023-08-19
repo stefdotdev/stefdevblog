@@ -14,13 +14,15 @@ const tagStyles = {
   <div class="flex flex-wrap justify-center gap-4 mt-8">
     {
       tags.map((tag) => (
-        <span
-          class={`bg${
-            tagStyles[tag] || "slate"
-          } justify-center w-auto flex items-center rounded-md  px-2 py-2 text-s text-grey-500 font-medium ring-1 ring-inset ring-gray-500/10`}
-        >
-          {tag}
-        </span>
+        <a href={`tags/${tag}`}>
+          <span
+            class={`bg${
+              tagStyles[tag] || "slate"
+            } justify-center w-auto flex items-center rounded-md  px-2 py-2 text-s text-grey-500 font-medium ring-1 ring-inset ring-gray-500/10`}
+          >
+            {tag}
+          </span>
+        </a>
       ))
     }
   </div>
