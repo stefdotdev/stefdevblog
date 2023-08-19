@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FrontPosts from "../../components/FrontPosts.astro";
+import { getCollection } from "astro:content";
+const posts = await getCollection("blog");
+---
+
+<BaseLayout pageTitle="Blog Posts">
+  <div class="latest-posts mx-auto max-w-2xl">
+    <FrontPosts posts={posts} />
+  </div>
+</BaseLayout>

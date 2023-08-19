@@ -11,7 +11,7 @@ const posts = await getCollection("blog");
     <HeroComponent />
     <hr class="mx-auto max-w-4xl my-8" />
     <div class="latest-posts mx-auto max-w-2xl">
-      <FrontPosts allPosts={posts} />
+      <FrontPosts posts={posts} />
     </div>
   </div>
 </BaseLayout>

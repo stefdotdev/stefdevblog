@@ -1,11 +1,11 @@
 ---
-const { allPosts, tag } = Astro.props;
+const { posts } = Astro.props;
 ---
 
 <h2 class="mx-auto text-2xl italic">Recent Posts</h2>
 <ul class="grid mt-4">
   {
-    allPosts.map((post) => (
+    posts.map((post) => (
       <>
         <li class="mb-6">
           <div class="lg:flex lg:items-center lg:justify-between">
