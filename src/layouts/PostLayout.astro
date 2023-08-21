@@ -9,10 +9,12 @@ const { pageTitle, ...post } = Astro.props;
   <div class="pt-14 lg:px-8">
     <div class="mx-auto max-w-2xl">
       <div class="text-center">
-        <h1 class="font-mono text-4xl tracking-tight text-gray-900 sm:text-5xl">
+        <h1
+          class="dark:text-white font-mono text-4xl tracking-tight text-gray-900 sm:text-5xl"
+        >
           {post.title}
         </h1>
-        <div class="mt-2 mx-auto text-sm text-gray-500">
+        <div class="dark:text-slate-400 mt-2 mx-auto text-sm text-gray-500">
           <svg
             class="mr-1.5 h-5 w-5 inline-flex text-gray-400"
             viewBox="0 0 20 20"
@@ -26,7 +28,9 @@ const { pageTitle, ...post } = Astro.props;
           </svg>
           {post.pubDate}
         </div>
-        <p class="mt-6 leading-5 text-sm sm:text-lg leading-8 text-gray-600">
+        <p
+          class="dark:text-slate-400 mt-6 leading-5 text-sm sm:text-lg leading-8 text-gray-600"
+        >
           {post.description}
         </p>
       </div>
@@ -36,7 +40,7 @@ const { pageTitle, ...post } = Astro.props;
   <div class="mx-auto max-w-2xl px-4 sm:px-0 text-sm sm:text-lg text-gray-600">
     <!-- Render the actual post file content. 
         Markdown renders text in <p> tags by default so no need to wrap this <slot /> -->
-    <article class="prose">
+    <article class="prose dark:prose-invert">
       <slot />
     </article>
   </div>

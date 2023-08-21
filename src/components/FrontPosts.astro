@@ -2,7 +2,7 @@
 const { posts } = Astro.props;
 ---
 
-<h2 class="mx-auto text-2xl italic">Recent Posts</h2>
+<h2 class="mx-auto text-2xl italic dark:text-white">Recent Posts</h2>
 <ul class="grid mt-4">
   {
     posts.map((post) => (
@@ -11,7 +11,7 @@ const { posts } = Astro.props;
           <div class="lg:flex lg:items-center lg:justify-between">
             <div class="min-w-0 flex-1">
               <a href={`/blog/${post.slug}/`}>
-                <h2 class="font-mono text-2xl font-bold leading-7 text-gray-700 sm:truncate sm:text-3xl sm:tracking-tight">
+                <h2 class="dark:text-white font-mono text-2xl font-bold leading-7 text-gray-700 sm:truncate sm:text-3xl sm:tracking-tight">
                   {post.data.title}
                 </h2>
               </a>
@@ -34,7 +34,9 @@ const { posts } = Astro.props;
               </div>
             </div>
           </div>
-          <p class="text-gray-600 pt-4">{post.data.description}</p>
+          <p class="dark:text-slate-400 text-gray-600 pt-4">
+            {post.data.description}
+          </p>
         </li>
       </>
     ))
